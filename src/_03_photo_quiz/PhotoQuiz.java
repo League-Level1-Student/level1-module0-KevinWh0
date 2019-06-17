@@ -26,33 +26,38 @@ public class PhotoQuiz {
 		// 1. find an image on the internet, and put its URL in a String
 		// variable (from your browser, right click on the image, and select
 		// “Copy Image Address”)
-
+		String url = "https://kevinwh0.github.io/Orbetory-Dev-Board/Poster.png";
 		// 2. create a variable of type "Component" that will hold your image
-
+		Component img = createImage(url);
 		// 3. use the "createImage()" method below to initialize your Component
-
+        
 		// 4. add the image to the quiz window
-
+		quizWindow.add(img);
 		// 5. call the pack() method on the quiz window
-
+		quizWindow.pack();
 		// 6. ask a question that relates to the image
-
+		String Q = JOptionPane.showInputDialog("Who made this game?");
+		
 		// 7. print "CORRECT" if the user gave the right answer
-
+		if(Q.equals("Kevin")) {
+			System.out.println("Correct");
+		}else{
+			System.out.println("Incorrect");
+		}
 		// 8. print "INCORRECT" if the answer is wrong
 
 		// 9. remove the component from the quiz window (you may not see the
 		// effect of this until step 12)
-
+		quizWindow.remove(img);
 		// 10. find another image and create it (might take more than one line
 		// of code)
-
+		String url2 = "https://kevinwh0.github.io/Orbetory-Dev-Board/KevinWho.jpg";
 		// 11. add the second image to the quiz window
-
+		Component img2 = createImage(url2);
 		// 12. pack the quiz window
-
+		quizWindow.pack();
 		// 13. ask another question
-
+		
 		// 14+ check answer, say if correct or incorrect, etc.
 
 	}
