@@ -57,10 +57,44 @@ public class PhotoQuiz {
 		// 12. pack the quiz window
 		quizWindow.pack();
 		// 13. ask another question
+		String Q2 = JOptionPane.showInputDialog("Have you played this game?");
+		//if(Q2.equals("")) {
+		//String Test[] = Q2.split("");
+		JLabel label1 = new JLabel();
+		quizWindow.add(label1);
 		
+		/*for(int i = 0; i<Test.length; i++) {
+			if(label1.getText("")) {
+				if(Test[i].equals("Y") || Test[i].equals("y")) {
+					System.out.print(Q2);
+					//yes
+					label1.setText("Nice!");
+				}else {
+					//no
+					
+					label1.setText("Oh, ok. You can get it then!");
+				}
+			}
+			
+			}*/
+		if(Q2.equals("Yes")) {
+			label1.setText("WoooHOOO!");
+		}else {
+			
+			label1.setText("Ok");
+		}
+		
+		
+		quizWindow.pack();
+		
+		
+		}
+		
+		
+		//}
 		// 14+ check answer, say if correct or incorrect, etc.
-
-	}
+		
+	//}
 
 	private Component createImage(String imageUrl) throws MalformedURLException {
 		URL url = new URL(imageUrl);
